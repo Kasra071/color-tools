@@ -1,0 +1,36 @@
+@font-face {
+    font-family: comic-sans;
+    src: url(./fonts/comic-sans.ttf);
+}
+@font-face {
+    font-family: consola;
+    src: url(./fonts/consola.ttf);
+}
+@font-face {
+    font-family: Opensans;
+    src: url(./fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: SourceCode;
+    src: url(./fonts/SourceSansPro-Regular.ttf);
+}
+@font-face {
+  font-family: iransans;
+  src: url(./fonts/IRANSansXNoEn-Regular.ttf);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: SourceCode,Opensans,sans-serif;
+    background-color: #645CAA;
+    color: white;
+}
+
+

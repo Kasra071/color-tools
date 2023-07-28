@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kasra071 - number base convertor</title>
+        <meta name="description"  content="in this page you can convert numbers from any base to any base. all bases from base 2 to base 36 are supported. just choose the bases , and start converting ! ">
+        <link rel="stylesheet" href="./index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="icon" href="./icon.png">
+        <meta charset="UTF-8">
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+
+        <h1>Numbers Conversion</h1>
+        <h3>By <a href="https://kasra071.com">Kasra071</a></h3>
+
+        <div class="WholeNumberContainer">
+            <div class="HeaderChooseBases">
+                <span>convert numbers from</span>
+                <div class="SelectTagsContainer">
+                    <select id="convert_from" class="numbers_select" onchange="numbers_changed_input_type()">
+                        <option value='2'>base 2</option>
+                        <option value='3'>base 3</option>
+                        <option value='4'>base 4</option>
+                        <option value='5'>base 5</option>
+                        <option value='6'>base 6</option>
+                        <option value='7'>base 7</option>
+                        <option value='8'>base 8</option>
+                        <option value='9'>base 9</option>
+                        <option value='10'>base 10</option>
+                        <option value='11'>base 11</option>
+                        <option value='12'>base 12</option>
+                        <option value='13'>base 13</option>
+                        <option value='14'>base 14</option>
+                        <option value='15'>base 15</option>
+                        <option value='16'>base 16</option>
+                        <option value='17'>base 17</option>
+                        <option value='18'>base 18</option>
+                        <option value='19'>base 19</option>
+                        <option value='20'>base 20</option>
+                        <option value='21'>base 21</option>
+                        <option value='22'>base 22</option>
+                        <option value='23'>base 23</option>
+                        <option value='24'>base 24</option>
+                        <option value='25'>base 25</option>
+                        <option value='26'>base 26</option>
+                        <option value='27'>base 27</option>
+                        <option value='28'>base 28</option>
+                        <option value='29'>base 29</option>
+                        <option value='30'>base 30</option>
+                        <option value='31'>base 31</option>
+                        <option value='32'>base 32</option>
+                        <option value='33'>base 33</option>
+                        <option value='34'>base 34</option>
+                        <option value='35'>base 35</option>
+                        <option value='36'>base 36</option>
+                    </select>
+                    to
+                    <select id="convert_to" class="numbers_select" onchange="numbers_changed_output_type()">
+                        <option value='2'>base 2</option>
+                        <option value='3'>base 3</option>
+                        <option value='4'>base 4</option>
+                        <option value='5'>base 5</option>
+                        <option value='6'>base 6</option>
+                        <option value='7'>base 7</option>
+                        <option value='8'>base 8</option>
+                        <option value='9'>base 9</option>
+                        <option value='10'>base 10</option>
+                        <option value='11'>base 11</option>
+                        <option value='12'>base 12</option>
+                        <option value='13'>base 13</option>
+                        <option value='14'>base 14</option>
+                        <option value='15'>base 15</option>
+                        <option value='16'>base 16</option>
+                        <option value='17'>base 17</option>
+                        <option value='18'>base 18</option>
+                        <option value='19'>base 19</option>
+                        <option value='20'>base 20</option>
+                        <option value='21'>base 21</option>
+                        <option value='22'>base 22</option>
+                        <option value='23'>base 23</option>
+                        <option value='24'>base 24</option>
+                        <option value='25'>base 25</option>
+                        <option value='26'>base 26</option>
+                        <option value='27'>base 27</option>
+                        <option value='28'>base 28</option>
+                        <option value='29'>base 29</option>
+                        <option value='30'>base 30</option>
+                        <option value='31'>base 31</option>
+                        <option value='32'>base 32</option>
+                        <option value='33'>base 33</option>
+                        <option value='34'>base 34</option>
+                        <option value='35'>base 35</option>
+                        <option value='36'>base 36</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="InputsContainer">
+
+                <div class="input-group">
+                    <input required="" oninput="numbers_input_sync()" autocomplete="off" id="numbers_input" class="input" type="text">
+                    <label class="user-label" id="numbers_input_placeholder"></label>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                <svg class="PointingDownSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>   
+                
+                <div class="input-group">
+                    <input required="" oninput="numbers_output_sync()" id="numbers_output" autocomplete="off" class="input" type="text">
+                    <label class="user-label" id="numbers_output_placeholder"></label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="Explaination">
+            <div class="LanguageSelect">
+                <div id="en-lang-btn" onclick="ChangeLanguage('en',this)">en</div>
+                <div onclick="ChangeLanguage('fa',this)">fa</div>
+            </div>
+            <h2 id="exp-title">what is this?</h2>
+            <div id="English-exp">
+                <p>
+                    Number base conversion is a process used in mathematics and computer science to convert a number from one numeral system to another. The most commonly used numeral systems are decimal (base 10), binary (base 2), octal (base 8), and hexadecimal (base 16).
+    
+                </p>
+                <p>
+                    Number base conversion is useful because it allows us to represent numbers in different ways and perform calculations in different numeral systems. For example, binary is commonly used in computer science because it is easy to represent using electronic circuits, while hexadecimal is often used because it provides a convenient way to represent groups of four binary digits. In addition, number base conversion is useful for converting between units of measurement that use different numeral systems, such as converting between miles per hour and kilometers per hour.
+    
+    
+                </p>
+                <p>
+                    Overall, number base conversion is an important tool in mathematics and computer science, and understanding its usefulness is essential for anyone working in these fields.
+    
+                </p>
+                <span>this text is generated by GPT-3.5</span>
+            </div>
+            <div id="Persian-exp">
+                <p>
+                    تبدیل پایه عدد، فرآیندی است که در ریاضیات و علوم کامپیوتر برای تبدیل یک عدد از یک سیستم عددی به سیستمی دیگر استفاده می‌شود. پراکنده‌ترین سیستم‌های عددی عبارتند از دهدهی (پایه ۱۰)، دودویی (پایه ۲)، هشت‌دهی (پایه ۸) و شانزده‌دهی (پایه ۱۶).    
+                </p>
+                <p>
+                    تبدیل پایه عدد به دلیل اینکه امکان نمایش اعداد به شکلی متفاوت و انجام محاسبات با سیستم عددی متفاوت را فراهم می‌کند، مفید است. به عنوان مثال، سیستم دودویی به دلیل سهولت در نمایش با استفاده از مدارهای الکترونیکی، در علوم کامپیوتر بسیار استفاده می‌شود، در حالی که سیستم شانزده‌دهی به دلیل فراهم کردن روش مناسبی برای نمایش گروه‌هایی از چهار رقم دودویی، اغلب مورد استفاده قرار می‌گیرد. به علاوه، تبدیل پایه عدد برای تبدیل بین واحدهای اندازه‌گیری با سیستم‌های عددی متفاوت مفید است، مانند تبدیل بین مایل بر ساعت و کیلومتر بر ساعت.    
+    
+                </p>
+                <p>
+                    در کل، تبدیل پایه عدد، یک ابزار مهم در ریاضیات و علوم کامپیوتر است و درک کاربرد آن برای هر کسی که در این حوزه‌ها کار می‌کند، ضروری است.    
+                </p>
+                <span>متن تولید شده توسط GPT-3.5</span>
+            </div>
+
+        </div>
+
+        <footer>
+            <span>Source Code in <a href="https://github.com/Kasra071/Numbers_Conversion">my github</a></span>
+        </footer>
+
+
+
+
+
+
+    </body>
+</html>
