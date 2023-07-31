@@ -29,8 +29,195 @@ html{
 
 body{
     font-family: SourceCode,Opensans,sans-serif;
-    background-color: #645CAA;
+    background-color: #000552;
     color: white;
 }
 
 
+h1{
+    text-align: center;
+    margin-top: 10px;
+}
+
+h3{
+    text-align:center;
+}
+
+h3 a{
+    color: #00f2ff;
+}
+
+
+.ColorsContainer{
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 0 10px black;
+  background-color: rgb(255, 255, 255,0.9);
+  min-height: 300px;
+  border-radius: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 50px;
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+}
+
+.ColorsContainer button{
+    width: 66%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    appearance: none;
+    background: linear-gradient( 90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 10%, rgba(208, 222, 33, 1) 20%, rgba(79, 220, 74, 1) 30%, rgba(63, 218, 216, 1) 40%, rgba(47, 201, 226, 1) 50%, rgba(28, 127, 238, 1) 60%, rgba(95, 21, 242, 1) 70%, rgba(186, 12, 248, 1) 80%, rgba(251, 7, 217, 1) 90%, rgba(255, 0, 0, 1) 100% );
+    transition: 0.2s all;
+}
+
+.ColorsContainer button:hover{
+    opacity: 0.8;
+}
+
+.ColorShower{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.ColorShower{
+    font-size: 28px;
+}
+
+.ColorChanger{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.RGBcontainer span{
+    margin-right: 5px;
+}
+.RGBcontainer .RGBnumber{
+    width: 70px;
+    font-size: 20px;
+}
+.RGBcontainer .RGBrange{
+    width: 255px;
+    margin-left: 10px;
+}
+
+.ColorChanger div{
+    width: 100%;
+}
+
+.Color{
+    display: flex;
+}
+
+.Explaination{
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px black;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: auto;
+    color: black;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    position: relative;
+   }
+
+   .Explaination h2{
+    text-align: center;
+    padding-top: 10px;
+    font-family: OpenSans,iransans;
+   }
+
+   .Explaination p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: Opensans;
+    text-align: justify;
+   }
+
+   .Explaination span{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 12px;
+   }
+
+   footer{
+    background-color: white;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-top: 70px;
+    font-size: 18px;
+   }
+   footer a{
+    color: blue;
+   }
+
+   .InputsContainer .PointingDownSVG{
+    display: none;
+   }
+
+   #Persian-exp p{
+    font-family: iransans;
+    direction: rtl;
+   }
+   #Persian-exp span{
+    left: 15px;
+    direction: rtl;
+    right: auto;
+   }
+
+   .LanguageSelect{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 75px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+
+   }
+   .LanguageSelect div{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    cursor: pointer;
+    user-select: none;
+   }
+   .LanguageSelect div:first-child{
+    border-left: 1px solid gray;
+   }
+   .LanguageSelect .activeLang{
+    background-color: #eee;
+   }
+   
