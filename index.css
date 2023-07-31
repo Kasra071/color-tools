@@ -21,6 +21,7 @@
 *{
     padding: 0px;
     margin: 0px;
+    font-family: SourceCode,Opensans,sans-serif;
 }
 
 html{
@@ -32,6 +33,8 @@ body{
     background-color: #000552;
     color: white;
 }
+
+
 
 
 h1{
@@ -58,7 +61,7 @@ h3 a{
   margin: auto;
   margin-bottom: 20px;
   margin-top: 20px;
-  padding: 50px;
+  /*padding: 50px;*/
   padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -90,24 +93,42 @@ h3 a{
     width: 300px;
     height: 300px;
     background-color: red;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     border-radius: 25px;
+    vertical-align: top;
+}
+
+.HexContainer input{
+    font-size: 20px;
 }
 
 .ColorShower{
     font-size: 28px;
 }
 
+.ColorPage{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .ColorChanger{
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 10px;
-    padding-bottom: 10px;
     font-size: 20px;
     margin-left: 15px;
+    display: inline-block;
+    vertical-align: top;
+    height: 300px;
+    margin-top: 10px;
+}
+
+.RGBcontainer{
+    margin-top: 10px;
+}
+
+.RGBshower{
+    margin-top: 10px;
 }
 
 .RGBcontainer span{
@@ -123,25 +144,46 @@ h3 a{
 }
 
 .ColorChanger div{
-    width: 100%;
+    display: block;
 }
 
 .Color{
+    padding: 50px;
+    padding-top: 0px;
+    width: 100%;
+}
+
+.BrowserColorPicker{
     display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.BrowserColorPicker span{
+    margin-right: 15px;
+}
+
+.ExpContainer{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .Explaination{
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 10px black;
     border-radius: 20px;
+    width: 100%;
+    color: black;
+    position: relative;
     max-width: 1200px;
     margin: auto;
-    color: black;
     margin-top: 50px;
+   }
+
+   .ExplainationTexts{
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
-    position: relative;
    }
 
    .Explaination h2{
@@ -221,3 +263,77 @@ h3 a{
     background-color: #eee;
    }
    
+
+
+   @media only screen and (max-width:800px){
+    .ColorsContainer button{
+        width: 90%;
+    }
+    .ColorShower{
+        width: 100%;
+
+    }
+   }
+
+
+ @media only screen and (max-width:620px){
+
+    .Explaination p{
+      font-size: 16px;
+    }
+ }
+
+ @media only screen and (max-width:520px){
+    .LanguageSelect{
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+     }
+          .Explaination p:first-child{
+      margin-top: 45px;
+     }
+ }
+
+
+   @media only screen and (max-width:460px){
+    .Color{
+        padding: 20px;
+    }
+    .ColorChanger{
+        font-size: 18px;
+    }
+    .ExplainationTexts{
+        padding: 20px;
+    }
+    .LanguageSelect{
+        top: 70px;
+       }
+   }
+
+   @media only screen and (max-width:430px){
+    .Color{
+        padding: 10px;
+    }
+    .ColorChanger{
+        font-size: 17px;
+    }
+    .RGBcontainer .RGBrange{
+        width: 170px;
+    }
+   }
+
+   @media only screen and (max-width:350px){
+    .Color{
+        padding: 5px;
+    }
+    .ColorChanger{
+        font-size: 16px;
+    }
+    .RGBcontainer .RGBrange{
+        width: 150px;
+    }
+   }
+
+
+
+
